@@ -33,9 +33,9 @@
     text-align: center;
 }
 
-.btn-heading {
+.main-btn {
     @include width-height(170px, 45px);
-    @include text($font_sahel, 14px, $color_primary);
+    @include text($font_sahel, 16px, $color_primary);
     text-transform: uppercase;
     letter-spacing: 1px;
     background: transparent;

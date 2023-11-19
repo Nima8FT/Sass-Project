@@ -14,3 +14,54 @@
         text-align: center;
     }
 }
+
+.about-us {
+    @include width-height(100%, 90vh);
+    @include flex;
+
+    &-left {
+        @include width-height(40%, auto);
+
+        img {
+            @include width-height(100%, auto);
+            opacity: 0.7;
+        }
+    }
+
+    &-right {
+        @include width-height(60%, auto);
+        @include flex();
+        flex-direction: column;
+        padding: 0 80px;
+
+        .main-heading {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .sub-heading {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            margin: 30px 0;
+        }
+
+        .star {
+            font-size: 15px;
+            color: $color_primary;
+            margin-left: 10px;
+        }
+
+        .description {
+            @include text($font_nataliq, 25px, $color_secondary);
+            direction: rtl;
+            text-align: justify;
+
+            &::first-letter {
+                padding-right: 30px;
+            }
+        }
+    }
+}
