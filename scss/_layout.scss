@@ -1,3 +1,65 @@
+.navbar {
+    position: relative;
+    z-index: 200;
+
+    &-navigation {
+        display: flex;
+
+        &-left {
+            @include width-height(50vw, 100vh);
+            background: $color_dark;
+            position: fixed;
+            left: -50vw;
+            transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+
+            .left-img {
+                @include width-height(50%, auto);
+                position: absolute;
+                box-shadow: 0 15px 60px rgba($color_black, 0.4);
+                opacity: 0.7;
+                border-radius: 10px
+            }
+
+            .left-img-1 {
+                top: 15%;
+                left: 15%;
+            }
+
+            .left-img-2 {
+                top: 35%;
+                left: 25%;
+            }
+
+            .left-img-3 {
+                top: 55%;
+                left: 35%;
+            }
+        }
+
+        &-right {
+            @include width-height(50vw, 100vh);
+            @include flex;
+            background: $color_black;
+            position: fixed;
+            right: -50vw;
+            transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+
+            .nav-list-item {
+                @include text($font_sahel, 40px, $color_secondary);
+                @include text-style;
+                display: block;
+                margin: 20px;
+                text-align: center;
+
+                &:hover {
+                    color: $color_primary;
+                    letter-spacing: 4px;
+                }
+            }
+        }
+    }
+}
+
 .header {
     @include width-height(100%, 100vh);
     position: relative;
@@ -63,6 +125,10 @@
                 padding-right: 30px;
             }
         }
+
+        .main-btn {
+            margin-bottom: 80px
+        }
     }
 }
 
@@ -102,3 +168,31 @@
     }
 
 }
+
+///////////start menu//////////
+
+.checkbox:checked~.navbar-navigation .navbar-navigation-left {
+    left: 0;
+}
+
+.checkbox:checked~.navbar-navigation .navbar-navigation-right {
+    right: 0;
+}
+
+.checkbox:checked~.menu .menu-lbl {
+    transform: rotateZ(90deg);
+}
+
+.checkbox:checked~.menu .menu-line-1 {
+    transform: rotateZ(-40deg);
+}
+
+.checkbox:checked~.menu .menu-line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked~.menu .menu-line-3 {
+    transform: rotateZ(40deg);
+}
+
+///////////end menu//////////

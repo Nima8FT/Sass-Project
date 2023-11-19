@@ -1,3 +1,32 @@
+//////////start navbar//////// 
+
+.menu {
+    @include width-height(40px, 40px);
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    z-index: 300;
+
+    &-lbl {
+        @extend %full-space;
+        @include flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: transform 0.5s;
+    }
+
+    &-line {
+        @include width-height(100%, 4px);
+        background: $color_primary;
+        transition: all 0.5s 0.5s;
+        transform-origin: right;
+    }
+}
+
+//////////end navbar//////// 
+
+
 //////////start header//////// 
 
 .logo {
