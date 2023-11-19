@@ -1,0 +1,103 @@
+//////////start header//////// 
+
+.logo {
+    @include width-height(110px, 110px);
+    @include flex();
+    @include text($font_sahel, 70px, $color_primary);
+    margin-right: 20px;
+    border: 3px solid $color_primary;
+    border-radius: 50%;
+}
+
+.main-name {
+    @include text-style;
+    @include text($font_sahel, 50px, $color_secondary);
+}
+
+.sub-name {
+    @include text($font_sahel, 18px, $color_secondary);
+    @include text-style;
+    text-align: center;
+}
+
+.main-heading {
+    @include text($font_nataliq, 100px, $color_primary);
+    font-weight: 300;
+    margin: 50px 0;
+}
+
+.sub-heading {
+    @include text($font_sahel, 60px, $color_secondary);
+    font-weight: 300;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.main-btn {
+    @include width-height(170px, 45px);
+    @include text($font_sahel, 16px, $color_primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    border: 1px solid $color_primary;
+    transition: all ease-in-out 0.4s;
+
+    &:hover {
+        background: $color_primary;
+        color: $color_dark;
+    }
+}
+
+//////////end header////////
+
+
+//////////start gallery////////
+
+.card {
+    @include width-height(33.333%, 30vw);
+    position: relative;
+    overflow: hidden;
+
+    &:hover .card-overlay {
+        left: 0;
+    }
+
+    &-overlay {
+        @extend %full-space;
+        @include flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background: rgba($color_primary, 0.6);
+        z-index: 10;
+        transition: left 0.5s;
+
+        &-heading {
+            @include text($font_nataliq, 50px, $color_white);
+            @include text-style;
+        }
+
+        &-paragraph {
+            @include text($font_sahel, 30px, $color_white);
+            @include text-style;
+            margin-bottom: 30px;
+        }
+
+        &-btn {
+            @include width-height(150px, 40px);
+            @include text($font_sahel, 14px, $color_primary);
+            background: $color_white;
+            border: 1px solid $color_primary;
+            border-radius: 30px;
+        }
+    }
+
+    &-img {
+        @extend %full-space;
+        object-fit: cover;
+        opacity: 0.5;
+    }
+}
+
+//////////end gallery////////
