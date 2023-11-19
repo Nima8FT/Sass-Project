@@ -1,0 +1,267 @@
+// @media (min-width: 1280px) {}
+
+@media (min-width: 769px) and (max-width:1279px) {
+
+    ///////start header///////
+    .logo {
+        @include width-height(90px, 90px);
+        font-size: 50px;
+    }
+
+    .main-name {
+        font-size: 35px;
+    }
+
+    .sub-name {
+        font-size: 15px;
+    }
+
+    .main-heading {
+        font-size: 60px;
+    }
+
+    .sub-heading {
+        font-size: 35px;
+    }
+
+    ///////end header///////
+
+
+    ///////start about us///////
+    .about-us-left {
+        display: none
+    }
+
+    .about-us-right {
+        width: 100%;
+
+        .main-heading {
+            font-size: 50px;
+        }
+
+        .sub-heading {
+            font-size: 30px;
+        }
+
+        .description {
+            font-size: 20px;
+        }
+    }
+
+    ///////end about us///////
+
+
+    ///////start gallery///////
+
+    .card-overlay {
+        &-heading {
+            font-size: 43px;
+        }
+
+        &-paragraph {
+            font-size: 23px;
+        }
+
+        &-btn {
+            @include width-height(100px, 35px);
+            font-size: 13px;
+        }
+    }
+
+    ///////end gallery///////
+
+}
+
+@media (min-width: 481px) and (max-width:768px) {
+
+    ///////start navbar///////
+    .nav-list-item {
+        font-size: 26px !important;
+    }
+
+    ///////end navbar///////
+
+
+    ///////start header///////
+    .logo {
+        @include width-height(80px, 80px);
+        font-size: 45px;
+    }
+
+    .main-name {
+        font-size: 25px;
+    }
+
+    .sub-name {
+        font-size: 13px;
+    }
+
+    .main-heading {
+        font-size: 60px;
+    }
+
+    .sub-heading {
+        font-size: 20px;
+    }
+
+    ///////end header///////
+
+
+    ///////start about us///////
+    .about-us-left {
+        display: none;
+    }
+
+    .about-us-right {
+        width: 100%;
+
+        .main-heading {
+            font-size: 40px;
+        }
+
+        .sub-heading {
+            font-size: 25px;
+        }
+
+        .description {
+            font-size: 15px;
+        }
+    }
+
+    ///////end about us///////
+
+
+    ///////start gallery///////
+
+    .card-overlay {
+        &-heading {
+            display: none;
+        }
+
+        &-paragraph {
+            display: none
+        }
+
+        &-btn {
+            @include width-height(100px, 35px);
+            font-size: 13px;
+        }
+    }
+
+    ///////end gallery///////
+
+
+    ///////start footer///////
+
+    .social-media-item {
+        font-size: 30px !important;
+    }
+
+    .footer-copyright-paragraph {
+        font-size: 12px;
+    }
+
+    ///////end footer///////
+
+}
+
+@media (max-width:480px) {
+
+    ///////start navbar///////
+    .nav-list-item {
+        font-size: 18px !important;
+    }
+
+    ///////end navbar///////
+
+    ///////start header///////
+    .logo {
+        @include width-height(55px, 55px);
+        font-size: 30px;
+    }
+
+    .main-name {
+        font-size: 20px;
+    }
+
+    .sub-name {
+        font-size: 10px;
+    }
+
+    .main-heading {
+        font-size: 60px;
+    }
+
+    .sub-heading {
+        font-size: 18px;
+    }
+
+    .main-btn {
+        @include width-height(130px, 36px);
+        font-size: 13px;
+    }
+
+    ///////end header///////
+
+
+    ///////start about us///////
+    .about-us-left {
+        display: none;
+    }
+
+    .about-us-right {
+        width: 100%;
+
+        .main-heading {
+            font-size: 30px;
+        }
+
+        .sub-heading {
+            font-size: 20px;
+        }
+
+        .description {
+            font-size: 12px;
+        }
+
+        .star {
+            font-size: 10px;
+        }
+    }
+
+    ///////end about us///////
+
+
+    ///////start gallery///////
+
+    .card-overlay {
+        &-heading {
+            display: none;
+        }
+
+        &-paragraph {
+            display: none
+        }
+
+        &-btn {
+            @include width-height(80px, 25px);
+            font-size: 11px;
+        }
+    }
+
+    ///////end gallery///////
+
+
+    ///////start footer///////
+
+    .social-media-item {
+        font-size: 30px !important;
+    }
+
+    .footer-copyright-paragraph {
+        font-size: 10px;
+    }
+
+    ///////end footer///////
+
+}

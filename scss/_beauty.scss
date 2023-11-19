@@ -1,0 +1,27 @@
+////////start navbar/////////
+
+.checkbox:checked~.navbar-navigation .navbar-navigation-left {
+    left: 0;
+}
+
+.checkbox:checked~.navbar-navigation .navbar-navigation-right {
+    right: 0;
+}
+
+.checkbox:checked~.menu .menu-lbl {
+    transform: rotateZ(90deg);
+}
+
+.checkbox:checked~.menu .menu-line-1 {
+    transform: rotateZ(-40deg);
+}
+
+.checkbox:checked~.menu .menu-line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked~.menu .menu-line-3 {
+    transform: rotateZ(40deg);
+}
+
+////////end navbar/////////
