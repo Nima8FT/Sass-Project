@@ -70,3 +70,35 @@
     @include flex;
     flex-wrap: wrap;
 }
+
+.footer {
+    @include flex;
+    flex-direction: column;
+    padding: 70px 0;
+
+    &-header {
+        @include flex;
+        margin-bottom: 70px;
+    }
+
+    .social-media {
+        @include width-height(300px, auto);
+        @include flex;
+        justify-content: space-between;
+        margin-bottom: 70px;
+
+        &-item {
+            @include text(tahoma, 50px, $color_secondary);
+
+            &:hover {
+                color: $color_primary;
+            }
+        }
+    }
+
+    &-copyright-paragraph {
+        @include text($font_sahel, 20px, $color_secondary);
+        direction: rtl;
+    }
+
+}
